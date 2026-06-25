@@ -24,11 +24,11 @@ h1 {
     /* Centers the image and text vertically next to each other */
     align-items: center; 
     /* The tight gap between the image and the text */
-    gap: 20px; 
+    gap: 200px; 
 }
 
 .column-img {
-    width: 100%;
+    width: 200%;
 }
 
 .column-text {
@@ -51,10 +51,8 @@ img {
     margin-top: 20px;
 }
 
-/* Modernized 3-column gallery using CSS Grid */
 .bottom-gallery {
     display: grid;
-    /* Creates 3 perfectly equal columns */
     grid-template-columns: repeat(3, 1fr); 
-    /* Centers the entire gallery block */
-    max
+    max-width: 100%;
+}
