@@ -1,0 +1,60 @@
+/* Basic styling - no advanced layouts */
+body {
+    font-family: "Times New Roman", serif;
+    background-color: #f0f0f0;
+    color: #000000;
+    padding: 10px;
+}
+
+h1 {
+    color: maroon;
+    text-align: center;
+}
+
+/* Modernized 2-columns using CSS Grid */
+.row-container {
+    width: 100%;
+    margin-bottom: 15px;
+    
+    display: grid;
+    /* Image column is small (max 150px), text column is 450px */
+    grid-template-columns: minmax(100px, 150px) 450px; 
+    /* Pulls both columns tight into the middle of the screen */
+    justify-content: center; 
+    /* Centers the image and text vertically next to each other */
+    align-items: center; 
+    /* The tight gap between the image and the text */
+    gap: 20px; 
+}
+
+.column-img {
+    width: 100%;
+}
+
+.column-text {
+    width: 100%;
+}
+
+/* Base image rule to fill grid spaces properly */
+img {
+    width: 100%;
+    height: auto;
+    border: 1px solid black;
+    display: block;
+}
+
+/* Basic blocks for lists */
+.recipe-box, .drinks-box {
+    background-color: white;
+    border: 1px solid gray;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Modernized 3-column gallery using CSS Grid */
+.bottom-gallery {
+    display: grid;
+    /* Creates 3 perfectly equal columns */
+    grid-template-columns: repeat(3, 1fr); 
+    /* Centers the entire gallery block */
+    max
