@@ -1,58 +1,64 @@
-/* Basic styling - no advanced layouts */
 body {
-    font-family: "Times New Roman", serif;
-    background-color: #f0f0f0;
-    color: #000000;
-    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean sans-serif is better for modern web */
+    background-color: #f9f9f9;
+    color: #333;
+    max-width: 900px; /* Constrain width so it doesn't stretch too wide on monitors */
+    margin: 0 auto;   /* Center the whole page */
+    padding: 20px;
 }
 
-h1 {
-    color: maroon;
+h1, h2 {
+    color: #800000; /* Maroon */
     text-align: center;
 }
 
-/* Modernized 2-columns using CSS Grid */
+/* Updated Grid for responsiveness */
 .row-container {
-    width: 100%;
-    margin-bottom: 15px;
-    
-    display: grid;
-    /* Image column is small (max 150px), text column is 450px */
-    grid-template-columns: minmax(100px, 150px) 450px; 
-    /* Pulls both columns tight into the middle of the screen */
-    justify-content: center; 
-    /* Centers the image and text vertically next to each other */
-    align-items: center; 
-    /* The tight gap between the image and the text */
-    gap: 200px; 
-}
-
-.column-img {
-    width: 200%;
-}
-
-.column-text {
-    width: 100%;
-}
-
-/* Base image rule to fill grid spaces properly */
-img {
-    width: 100%;
-    height: auto;
-    border: 1px solid black;
-    display: block;
-}
-
-/* Basic blocks for lists */
-.recipe-box, .drinks-box {
-    background-color: white;
-    border: 1px solid gray;
+    display: grid;  
+    grid-template-columns: 300px 1fr; /* Image is fixed size, text takes the remaining space */
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 30px;
+    background: #8a7064;
     padding: 15px;
-    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Ensure images fit nicely */
+.column-img img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 4px;
 }
 
 .bottom-gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    max-width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.bottom-gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.column-img img {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    cursor: pointer; /* Changes the cursor to a hand icon on hover */
+}
+
+.column-img img:hover {
+    transform: scale(1.05); /* Slightly zooms the image */
+    opacity: 0.8;           /* Slightly fades the image */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Adds a pop-out shadow effect */
+}
+
+body {
+    background-color: #9e8e6f;
+    padding: 20px;
+    border-radius: 8px;
 }
