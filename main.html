@@ -7,46 +7,112 @@
 </head>
 <body>
 
-    <h1>Fried Chicken Hub</h1>
-    <p style="text-align:center;">Fried chicken and refreshments.</p>
+<h1>Fried Chicken Hub</h1>
+<p style="text-align:center;">Fried chicken and refreshments.</p>
 
-    <div class="row-container">
-        <div class="column-img"><a href="southern.html"><img src="southern.jpg" alt="Classic Southern Fried Chicken"></a></div>
-        <div class="column-text">
-            <h3>Row 1: Classic Southern Fried Chicken</h3>
-            <p>Golden, crunchy, and seasoned to perfection with traditional spices.</p>
+<div class="recipe-wrapper">
+
+    <button class="scroll-arrow" onclick="scrollUp()">▲</button>
+
+    <div class="recipe-scroll">
+
+        <div class="recipe-card">
+            <div class="column-img">
+                <a href="southern.html">
+                    <img src="classic.avif" alt="Classic Southern Fried Chicken">
+                </a>
+            </div>
+
+            <div class="column-text">
+                <h3>Classic Southern Fried Chicken</h3>
+                <p>
+                    The gold standard of comfort food. This recipe delivers the perfect
+                    crunch—a savory, golden-brown exterior protecting meat that stays
+                    succulent and tender. It’s an iconic dish built on the perfect
+                    balance of garlic, pepper, and tradition.
+                </p>
+            </div>
         </div>
+
+        <div class="recipe-card">
+            <div class="column-img">
+                <a href="nashville.html">
+                    <img src="nashville.jpg" alt="Nashville Hot Chicken">
+                </a>
+            </div>
+
+            <div class="column-text">
+                <h3>Nashville Hot Chicken</h3>
+                <p>
+                    Not just spicy, but legendary. This chicken is fried to a deep,
+                    dark crisp and then finished with a fiery, cayenne-infused hot oil
+                    paste. Served traditionally on a slice of white bread to soak up
+                    the heat, it’s a bold, smoky, and addictive experience for those
+                    who love a serious kick.
+                </p>
+            </div>
+        </div>
+
+        <div class="recipe-card">
+            <div class="column-img">
+                <a href="buttermilk.html">
+                    <img src="buttermilk.jpg" alt="Crispy Buttermilk Tenders">
+                </a>
+            </div>
+
+            <div class="column-text">
+                <h3>Crispy Buttermilk Tenders</h3>
+                <p>
+                    A masterclass in texture, this recipe uses a tangy buttermilk
+                    brine to tenderize the chicken from the inside out. The result is
+                    an incredibly juicy, succulent bite encased in a signature light,
+                    shattered-glass crust. It’s the perfect balance of mild acidity
+                    and rich, savory seasoning.
+                </p>
+            </div>
+        </div>
+
     </div>
 
-    <div class="row-container">
-        <div class="column-img"><a href="nashville.html"><img src="nashville.jpg" alt="Nashville Hot Chicken"></a></div>
-        <div class="column-text">
-            <h3>Row 2: Nashville Hot Chicken</h3>
-            <p>Brushed with a fiery cayenne pepper oil straight out of the fryer.</p>
-        </div>
-    </div>
+    <button class="scroll-arrow" onclick="scrollDown()">▼</button>
 
-    <div class="row-container">
-        <div class="column-img"><a href="buttermilk.html"><img src="buttermilk.jpg" alt="Crispy Buttermilk Tenders"></a></div>
-        <div class="column-text">
-            <h3>Row 3: Crispy Buttermilk Tenders</h3>
-            <p>Marinated in rich buttermilk for hours to stay tender.</p>
-        </div>
-    </div>
+</div>
 
-        <h2>The Perfect Summer Pairings</h2>
+    <h2>The Perfect Summer Pairings</h2>
+<div class="pairing-list">
         <ul>
             <li><strong>Fresh Watermelon:</strong> Chilled juicy slices to cool down the palate.</li>
             <li><strong>Cold Kool-Aid:</strong> Sweet Tropical Punch flavor served over ice.</li>
-        </ul>
-    </div>
+        </ul>    
+</div>
 
-    <h2>The Complete Spread</h2>
-    <div class="bottom-gallery">
-        <img src="chicken.jpg" alt="Chicken Platter">
-        <img src="watermelon.jpeg" alt="Watermelon Slices">
-        <img src="koolaid.jpg" alt="Kool-Aid Jug">
-    </div>
+<h2>The Complete Spread</h2>
 
-</body>
-</html>
+<div class="bottom-gallery">
+    <img src="chicken.jpg" alt="Chicken Platter">
+    <img src="watermelon.jpeg" alt="Watermelon Slices">
+    <img src="koolaid.jpg" alt="Kool-Aid Jug">
+</div>
+
+<div class="proven">
+    <p>
+        <em>tested and proven by Gursimarjeet the professional fried chicken man</em>
+    </p>
+</div>
+
+
+<script>
+function scrollUp() {
+    document.querySelector(".recipe-scroll").scrollBy({
+        top: -500,
+        behavior: "smooth"
+    });
+}
+
+function scrollDown() {
+    document.querySelector(".recipe-scroll").scrollBy({
+        top: 500,
+        behavior: "smooth"
+    });
+}
+</script>

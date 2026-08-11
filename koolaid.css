@@ -1,38 +1,101 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean sans-serif is better for modern web */
-    background-color: #f9f9f9;
-    color: #333;
-    max-width: 900px; /* Constrain width so it doesn't stretch too wide on monitors */
-    margin: 0 auto;   /* Center the whole page */
-    padding: 20px;
-}
-
 h1, h2 {
-    color: #800000; /* Maroon */
+    color: #800000;
     text-align: center;
 }
 
-/* Updated Grid for responsiveness */
-.row-container {
-    display: grid;  
-    grid-template-columns: 300px 1fr; /* Image is fixed size, text takes the remaining space */
-    gap: 20px;
-    align-items: center;
-    margin-bottom: 30px;
-    background: #8a7064;
-    padding: 15px;
+/* Main page background */
+body {
+    background-color: #9e8e6f;
+    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Ensure images fit nicely */
-.column-img img {
+
+/* Recipe scroll */
+.recipe-wrapper {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.recipe-scroll {
     width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 4px;
+    height: 500px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
 }
 
+.recipe-card {
+    height: 500px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    padding: 40px;
+
+    background: #85663f;
+    border-radius: 20px;
+
+    scroll-snap-align: start;
+}
+
+
+/* Recipe images */
+.recipe-card .column-img {
+    flex: 1;
+}
+
+.recipe-card .column-img img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+}
+
+
+/* Image hover effect */
+.recipe-card .column-img img:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+
+/* Recipe text */
+.recipe-card .column-text {
+    flex: 1;
+}
+
+.recipe-card .column-text h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.recipe-card .column-text p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+/* Up and down arrows */
+.scroll-arrow {
+    display: block;
+    margin: 8px auto;
+    border: none;
+    background: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+/* Bottom gallery */
 .bottom-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -41,24 +104,38 @@ h1, h2 {
 
 .bottom-gallery img {
     width: 100%;
-    height: 200px;
+    height: 300px;
     object-fit: cover;
     border-radius: 8px;
 }
 
-.column-img img {
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    cursor: pointer; /* Changes the cursor to a hand icon on hover */
+
+/* Recipe page hero image */
+.recipe-hero {
+    width: 70%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
 }
 
-.column-img img:hover {
-    transform: scale(1.05); /* Slightly zooms the image */
-    opacity: 0.8;           /* Slightly fades the image */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Adds a pop-out shadow effect */
+
+/* Recipe page box */
+.recipe-box {
+    background-color: #85663f;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 80px;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+    /* Makes all text inside the box bigger */
+    font-size: 1.3rem;
 }
 
-body {
-    background-color: #9e8e6f;
-    padding: 20px;
-    border-radius: 8px;
+
+.pairing-list {
+    font-size: 1.3rem;
+    margin-left: 550px;
 }
