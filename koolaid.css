@@ -22,17 +22,11 @@ body {
 .recipe-scroll {
     width: 100%;
     height: 500px;
-    overflow-y: scroll;
+    overflow-y: hidden;
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
     scrollbar-width: none;
 }
-
-/* Hide scrollbar */
-.recipe-scroll::-webkit-scrollbar {
-    display: none;
-}
-
 
 /* Recipe cards */
 .recipe-card {
